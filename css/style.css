@@ -1,0 +1,119 @@
+html,body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+a {
+    text-decoration: none;
+    color:black;
+}
+li {
+    list-style-type: none;
+}
+
+input[type="text"],input[type="search"],input[type="url"],textarea,input[type="password"]{
+    padding-left:9px;
+}
+
+/* ヘッダーの設定 */
+
+header {
+    background-color: #F2F2F2;
+    opacity:0.9;
+    width:100%;
+    height:90px;
+    padding:20px 5px 10px 20px;
+    position: sticky;
+    z-index: 10;
+    top:0;
+    left: 0;
+}
+
+.service-name {
+    margin:0px 0px 10px 0px;
+}
+
+.nav {
+    flex-wrap: nowrap;
+    margin-top:30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-left {
+    display: flex;
+    justify-content: flex-start;
+    width: 50%;
+}
+
+
+.nav-right {
+    display: flex;
+    justify-content: flex-end;
+    width: 50%;
+    font-size:20px;
+}
+
+.nav-right svg{
+    width:20px;
+    height:20px;
+}
+
+.nav-link {
+    margin-right:5%;
+}
+
+.nav-link:hover {
+    color:cadetblue;
+}
+
+/* ログインポップアップの設定 */
+
+#user-menu-container {
+    position: absolute;
+    top:100px;
+    right:50px;
+    width: 120px;
+    height: 90px;
+    background-color: white;
+    border-width: 1px;
+    border-style: solid;
+    border-color:darkgray;
+    border-radius: 10px;
+    text-align: center;
+    display: none;
+}
+
+.user-menu-link:hover {
+    color:cadetblue;
+    margin-bottom: 2%;
+}
+
+/* メインの設定 */
+
+main{
+    min-height: calc(100% - 286px);
+  }
+
+/* フッターの設定 */
+
+footer {
+    background-color: darkgray;
+    padding: 10px;
+    color: white;
+}
+
+footer p {
+    text-align: center;
+}
+
+/* ログイン認証の設定*/
+
+.login-to-user-regi:hover {
+    color: cadetblue;
+}

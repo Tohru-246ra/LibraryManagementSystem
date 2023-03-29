@@ -1,0 +1,82 @@
+.main-container {
+    margin-top: 90px;
+}
+
+.main-container  h3{
+    text-align:center;
+}
+
+.main-container p {
+    text-align:center;
+}
+
+.main-container #search {
+    text-align:center;
+}
+
+.main-container #search-word {
+    width:320px;
+    height:40px;
+    margin-right:10px;
+    margin-bottom:50px;
+}
+
+.main-container #search-botton {
+    width:80px;
+    height:40px;
+}
+
+.select-item {
+    margin:0px 0px 0px 30%;
+}
+
+#select p {
+    margin:0px 0px 50px 0px;
+}
+
+#decision {
+    margin:30px 0px 20px 47%;
+    width:80px;
+    height:30px;
+}
+
+#edit {
+    text-align:center;
+}
+
+#edit .input {
+    width:400px;
+    height:20px;
+}
+
+#edit .tag {
+    margin:20px 320px 0px 0px;
+}
+
+#edit .title {
+    margin-right:330px;
+}
+
+#edit .author {
+    margin-right:365px;
+}
+
+#edit .publisher, #edit .pubdate {
+    margin-right:355px
+}
+
+#not-read , #read {
+    margin: 30px 0px 40px 30px;
+}
+
+#edit #register {
+    margin: 0px 100px 30px 30px;
+    width:90px;
+    height:30px;
+}
+
+#edit #return {
+    margin: 0px 10px 30px 0px;
+    width:90px;
+    height:30px;
+}

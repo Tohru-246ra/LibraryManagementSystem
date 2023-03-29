@@ -1,0 +1,162 @@
+/* メインコンテナの設定 */
+.main-container {
+    margin-top:55px;
+    background-image:url(/LMS/image/sample.jpg);
+    height: 475px;
+    position:relative;
+}
+
+.main-container h1, .main-container h2 {
+    animation-name: catchphraseopen;
+    animation-duration:2.5s;
+}
+
+@keyframes catchphraseopen {
+    from {opacity: 0}
+    to {opacity: 1}
+}
+
+.main-container h1 {
+    margin: 0;
+    color: white;
+    position:absolute;
+    top:180px;
+    left:38%;
+}
+
+.main-container h2 {
+    margin: 0;
+    text-align: center;
+    color: white;
+    position:absolute;
+    top:230px;
+    left:41%;
+}
+
+
+/* 書籍情報の設定 */
+
+.book-info {
+    margin-top:50px;
+}
+
+.book-info-1, .book-info-2  {
+    padding:0px 0px 3px 20px;
+    border-bottom: 3px solid darkgray;
+}
+
+.new-books, .user-books {
+    display:flex;
+    flex-wrap:nowrap;
+    justify-content:space-between;
+    overflow-x: auto;
+    opacity: 0;
+    margin:0px 5px 50px 5px;
+}
+
+.new-books.show, .user-books.show {
+    animation-name:appear;
+    animation-duration: 4s;
+    animation-direction: left;
+    animation-fill-mode: forwards;
+}
+
+@keyframes appear {
+    from {opacity: 0}
+    to {opacity: 1}
+}
+
+#new-books img, #user-books img {
+    width:200px;
+    height: 300px;
+    text-align: center;
+    margin:0px 10px 0px 10px;
+}
+
+.new-book:hover, .user-book:hover {
+    filter:brightness(0.9);
+}
+
+/* 詳細の設定 */
+
+.modal {
+    position: fixed;
+    z-index: 11;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+}
+  
+#modal-content {
+    background-color: #f4f4f4;
+    margin: 5% auto;
+    width: 50%;
+    height:85%;
+    box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2);
+    animation-name: modalopen;
+    animation-duration: 1s;
+    display: flex;
+    flex-direction:column;
+}
+  
+@keyframes modalopen {
+    from {opacity: 0}
+    to {opacity: 1}
+}
+  
+.modal-info {
+    width:95%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 5px auto 0 ;
+    padding: 10px;
+}
+
+.modal-info img {
+    margin:20px 15px 0 0;
+    height: 300px;
+    width:200px;
+}
+
+.modal-book-info{
+    width: 60%;
+    height: 300px;
+    margin: 20px 0 0 0;
+    padding: 3px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.modal-book-info p {
+    margin: 3px 0;
+    width:98%;
+}
+
+.modal-description {
+    margin:0 25px 30px 25px;
+    overflow-y: auto;
+    padding: 3px;
+    line-height:30px;
+}
+  
+.modalClose {
+    font-size: 2rem;
+    height: 50px;
+    margin:0px  0px 0px 40px;
+}
+  
+.modalClose:hover {
+    cursor: pointer;
+}
+
+.edit {
+    margin-top:230px;
+    height:40px;
+    width:80px
+}

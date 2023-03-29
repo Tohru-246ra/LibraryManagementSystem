@@ -1,0 +1,172 @@
+/* メインコンテナの設定 */
+
+.main-container {
+    margin-top:90px;
+}
+
+.main-container h3 {
+    text-align:center;
+}
+
+.main-container form {
+    text-align:center;
+}
+
+#search-word {
+    width:320px;
+    height:40px;
+    margin-right:10px;
+}
+
+#search {
+    width:100px;
+    height:40px;
+}
+
+.check-box {
+    margin:25px 0px;
+}
+
+
+.check-box label {
+    margin:0 15px;
+}
+
+#book-num {
+    text-align:center;
+    margin-top:50px;
+    margin-bottom:50px;
+}
+
+/* 検索結果の設定 */
+
+#results {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.result {
+    display: flex;
+    flex-direction: column;
+    padding:20px;
+    box-sizing:border-box;
+}
+
+.result img {
+    height: 375px;
+    width:250px;
+}
+
+.result .title {
+    margin-top: 2px;
+    margin-bottom: 2px;
+    text-align:center;
+    font-weight:bold;
+}
+
+.result .author {
+    margin-top: 0px;
+    margin-bottom: 20px;
+    text-align:center;
+    font-weight:bold;
+}
+
+.result:hover {
+    filter:brightness(0.9);
+    cursor: pointer;
+    color: darkgray;
+}
+
+#results:after {
+    content: "";
+    display: block;
+    width: 600px;
+    height: 0;
+}
+
+
+/* 詳細の設定 */
+
+.modal {
+    position: fixed;
+    z-index: 11;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+}
+  
+#modal-content {
+    background-color: #f4f4f4;
+    margin: 5% auto;
+    width: 50%;
+    height:85%;
+    box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2);
+    animation-name: modalopen;
+    animation-duration: 1s;
+    display: flex;
+    flex-direction:column;
+}
+  
+@keyframes modalopen {
+    from {opacity: 0}
+    to {opacity: 1}
+}
+  
+.modal-info {
+    width:95%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 5px auto 0 ;
+    padding: 10px;
+}
+
+.modal-info img {
+    margin:20px 15px 0 0;
+    height: 300px;
+    width:200px;
+}
+
+.modal-book-info{
+    width: 60%;
+    height: 300px;
+    margin: 20px 0 0 0;
+    padding: 3px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.modal-book-info p {
+    margin: 3px 0;
+    width:98%;
+}
+
+.modal-description {
+    margin:0 25px 30px 25px;
+    overflow-y: auto;
+    padding: 3px;
+    line-height:30px;
+}
+  
+.modalClose {
+    font-size: 2rem;
+    height: 50px;
+    margin:0px  0px 0px 40px;
+}
+  
+.modalClose:hover {
+    cursor: pointer;
+}
+
+.edit {
+    margin-top:230px;
+    height:40px;
+    width:80px
+}

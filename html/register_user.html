@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>LMS</title>
+    <meta name="description" content="おうちの本を管理するwebアプリ">
+    <script src="../../bootstrap-5.3.0-alpha1-dist/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="/LMS/css/style.css">
+    <link rel="stylesheet" href="/LMS/css/register_user.css">
+    <script src="/LMS/js/register_user.js" defer></script>
+    <script src="/LMS/js/login_user.js" defer></script>
+    <script src="/LMS/js/logout.js" defer></script>
+    <script src="/LMS/js/login_check.js" defer></script>
+    <script src="/LMS/js/user_menu.js" defer></script>
+</head>
+<body>
+    <header>
+        <h2 class="service-name"><a href="/LMS/index.html">LMS <span style="font-size:70%">Library Management System</span></a></h2>
+        <nav class="nav">
+            <div class="nav-left">
+                <a class="nav-link"  href="/LMS/html/search.html">SEARCH</a>
+                <a class="nav-link" id="login-check1"  href="#">REGISTER</a>
+                <a class="nav-link" id="login-check2" href="#">EDIT</a>
+                <a class="nav-link" href="/LMS/html/register_user.html">SIGN UP</a>
+            </div>
+            <div class="nav-right">
+                <a class="nav-link" id="user-menu" href="#">
+                    <span id="login-user">GUEST&nbsp&nbsp</span>
+                    <svg id="login-user-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16"> 
+                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                        <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+                    </svg>
+                </a>
+            </div>
+        </nav>
+        <div id="user-menu-container" tabindex="0">
+            <p><a class="user-menu-link" href="/LMS/html/login.html">SIGN IN</a></p>
+            <p><a class="user-menu-link" id="logout" href="#">SIGN OUT</a></p>
+        </div>
+    </header>
+    <main>
+        <div class="main-container">
+            <h3>ユーザー登録を行います</h3>
+            <form>
+                <p class="explanation">あなたの名前を教えてください (必須)</p>
+                <input type="text" id="user" class="input">
+                <p class="explanation">パスワードを入力してください (必須)</p>
+                <input type="password" id="pass1" class="input">
+                <p class="explanation" id="last-ex">確認のため、再度パスワードを入力してください (必須)</p>
+                <input type="password" id="pass2" class="input">
+                <div>                
+                    <input type="button" id="register" value="登録" onclick="onclick_btn()">
+                </div>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <p>© 2023 tohru</p>
+    </footer>
+</body>
+</html>

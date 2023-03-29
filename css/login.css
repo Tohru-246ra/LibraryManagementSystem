@@ -1,0 +1,25 @@
+.main-container {
+    text-align:center;
+    margin-top: 90px;
+}
+
+.main-container a {
+    display:inline-block;
+    margin: 0px 0px 20px 0px;
+    color:darkgray;
+}
+
+form p {
+    margin: 0px 220px 0px 0px;
+}
+
+form input {
+    width:300px;
+    height:30px;
+    margin-top:10px;
+    margin-bottom:20px;
+}
+
+#login {
+    width:100px;
+}
