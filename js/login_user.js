@@ -1,5 +1,5 @@
 if (document.cookie == "") {
-    document.getElementById("login-user").innerHTML = "ゲスト&nbsp&nbsp";
+    document.getElementById("login-user").innerHTML = "GUEST&nbsp&nbsp";
 } else {
     let cookieItems = document.cookie.split(';');
 

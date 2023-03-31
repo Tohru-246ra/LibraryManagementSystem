@@ -1,8 +1,8 @@
 /* メインコンテナの設定 */
 .main-container {
-    margin-top:55px;
+    margin-top:6vh;
     background-image:url(/LMS/image/sample.jpg);
-    height: 475px;
+    height: 62vh;
     position:relative;
 }
 
@@ -20,7 +20,7 @@
     margin: 0;
     color: white;
     position:absolute;
-    top:180px;
+    top:20vh;
     left:38%;
 }
 
@@ -29,7 +29,7 @@
     text-align: center;
     color: white;
     position:absolute;
-    top:230px;
+    top:30vh;
     left:41%;
 }
 

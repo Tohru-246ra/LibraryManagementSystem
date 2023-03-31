@@ -97,7 +97,7 @@ header {
 /* メインの設定 */
 
 main{
-    min-height: calc(100% - 286px);
+    min-height: calc(100% - 236px);
   }
 
 /* フッターの設定 */

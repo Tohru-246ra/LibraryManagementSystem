@@ -1,3 +1,16 @@
+<?php
+    if (isset($_COOKIE["PHPSESSID"])) {
+        session_start();
+
+        if ( !(isset( $_SESSION["login"] )) ) {
+            header("Location:/LMS/html/forbidden.html");
+            exit;
+        }
+    } else {
+        header("Location:/LMS/html/forbidden.html");
+        exit;
+    }
+?>
 <!DOCTYPE html>
 <html lang="ja">
 <head>

@@ -1,6 +1,6 @@
 function login_user_icon() {
     if (document.cookie == "") {
-        document.getElementById("login-user").innerHTML = "ゲスト&nbsp&nbsp";
+        document.getElementById("login-user").innerHTML = "GUEST&nbsp&nbsp";
     } else {
         const cookieItems = document.cookie.split(';');
 

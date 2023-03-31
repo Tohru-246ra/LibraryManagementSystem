@@ -8,7 +8,7 @@ element1.addEventListener('click', () => {
     })
     .then(function(text) {
         if (text == true) {     
-            location.href = "/LMS/html/register_book.html";
+            location.href = "/LMS/html/register_book.php";
         } else {
             alert("この操作を行うためにはログインを行ってください");
             const isYes = confirm("ログイン認証を行います");
