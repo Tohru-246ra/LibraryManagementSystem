@@ -202,6 +202,39 @@ function onclick_btn4() {
     edit.style.display = "none";
 }
 
+function onclick_btn5() {
+    const isYes = confirm("本当によろしいですか？");
+    
+    if (isYes) {
+        const obj = {
+            isbn: `${search}`
+        };
+    
+        const data = {
+            method: 'POST',
+            headers: {
+                'Content-Type':'application/json'
+            },
+            body: JSON.stringify(obj)
+        };
+    
+        async function send(data){
+            const res = await fetch('/LMS/php/delete_book.php',data);
+            const ans = await res.text();
+    
+            if (ans == true) {
+                alert(ans);
+                location.href = "/LMS/html/edit.php";
+            } else {
+                alert(ans);
+                location.href = "/LMS/html/edit.php";
+            }
+        }
+    
+        send(data);
+    } 
+}
+
 let get_isbn = document.getElementById("get-isbn");
 
 window.addEventListener("load",() => {

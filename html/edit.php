@@ -110,6 +110,13 @@
                 <label for="read">既読</label></br>
                 <input type="button" id="register" value="登録" onclick="onclick_btn3()">
                 <input type="button" id="return" value="戻る" onclick="onclick_btn4()">
+                <?php
+                if ($data["admin"] == 1) {
+                    echo '<input type="button" id="delete" value="消去" 
+                        onclick="onclick_btn5()" style="width:90px; height:30px;
+                        margin: 0px 0px 30px 85px; color:red;">';
+                } 
+                ?>
             </form>
         </div>
     </main>
