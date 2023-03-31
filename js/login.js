@@ -57,7 +57,7 @@ function onclick_btn() {
             login_user_icon();
             
             alert("ログイン成功\nようこそ "+ans+" さん！");
-            location.href = "/LMS/index.html";
+            location.href = "/LMS/index.php";
         }
     }
 

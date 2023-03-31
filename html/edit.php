@@ -1,13 +1,34 @@
 <?php
+    $admin = false;
+
     if (isset($_COOKIE["PHPSESSID"])) {
         session_start();
-
-        if ( !(isset( $_SESSION["login"] )) ) {
-            header("Location:/LMS/html/forbidden.html");
+        if (isset( $_SESSION["login"] )) {
+            ini_set('display_errors', 1 );
+            error_reporting(E_ALL);
+        
+            $DBServer = "localhost";
+            $DBUser = "root";
+            $DBPassword = "";
+            $DBName = "lms_db";
+        
+            $con = mysqli_connect($DBServer,$DBUser,$DBPassword);
+            $selectDB = mysqli_select_db($con,$DBName);
+            mysqli_set_charset($con,"utf8");
+        
+            $result = mysqli_query($con,"select admin from users where user='{$_SESSION["login"]}';");
+        
+            $data = mysqli_fetch_array($result,MYSQLI_ASSOC);
+            
+            if ($data["admin"] == 1) {
+                $admin =  '<p><a class="user-menu-link" id="admin" href="/LMS/html/admin.php">ADMIN</a></p>';
+            } 
+        } else {
+            header("Location:/LMS/html/forbidden.php");
             exit;
         }
     } else {
-        header("Location:/LMS/html/forbidden.html");
+        header("Location:/LMS/html/forbidden.php");
         exit;
     }
 ?>
@@ -28,13 +49,13 @@
 </head>
 <body>
     <header>
-        <h2 class="service-name"><a href="/LMS/index.html">LMS <span style="font-size:70%">Library Management System</span></a></h2>
+        <h2 class="service-name"><a href="/LMS/index.php">LMS <span style="font-size:70%">Library Management System</span></a></h2>
         <nav class="nav">
             <div class="nav-left">
-                <a class="nav-link"  href="/LMS/html/search.html">SEARCH</a>
+                <a class="nav-link"  href="/LMS/html/search.php">SEARCH</a>
                 <a class="nav-link" id="login-check1"  href="#">REGISTER</a>
                 <a class="nav-link" id="login-check2" href="#">EDIT</a>
-                <a class="nav-link" href="/LMS/html/register_user.html">SIGN UP</a>
+                <a class="nav-link" href="/LMS/html/sign_up.php">SIGN UP</a>
             </div>
             <div class="nav-right">
                 <a class="nav-link" id="user-menu" href="#">
@@ -47,10 +68,17 @@
             </div>
         </nav>
         <div id="user-menu-container" tabindex="0">
-            <p><a class="user-menu-link" href="/LMS/html/login.html">SIGN IN</a></p>
-            <p><a class="user-menu-link" id="logout" href="#">SIGN OUT</a></p>
+            <div id="user-menu-link-container">
+                <?php
+                if ($admin) {
+                    echo $admin;
+                }
+                ?> 
+                <p><a class="user-menu-link" href="/LMS/html/login.php">SIGN IN</a></p>
+                <p><a class="user-menu-link" id="logout" href="#">SIGN OUT</a></p>
+            </div>
         </div>
-    </header> 
+    </header>
     <main>
         <div class="main-container">
             <h3>登録内容の編集を行います</h3>

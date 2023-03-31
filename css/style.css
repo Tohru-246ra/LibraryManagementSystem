@@ -79,7 +79,6 @@ header {
     top:100px;
     right:50px;
     width: 120px;
-    height: 90px;
     background-color: white;
     border-width: 1px;
     border-style: solid;
@@ -89,9 +88,19 @@ header {
     display: none;
 }
 
+#user-menu-link-container {
+    display:flex;
+    flex-direction:column;
+    justify-content:space-around;
+    height:100%;
+}
+
+#user-menu-link-container p{
+    margin:10px 0;
+}
+
 .user-menu-link:hover {
     color:cadetblue;
-    margin-bottom: 2%;
 }
 
 /* メインの設定 */

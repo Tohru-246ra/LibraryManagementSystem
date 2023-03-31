@@ -41,6 +41,7 @@ document.getElementById("logout").addEventListener('click',() => {
                     login_user_icon();
                     
                     alert("正常にログアウトできました");
+                    window.location.reload();
                 } else {
                     alert("ログアウトに失敗しました");
                 }

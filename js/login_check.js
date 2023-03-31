@@ -13,7 +13,7 @@ element1.addEventListener('click', () => {
             alert("この操作を行うためにはログインを行ってください");
             const isYes = confirm("ログイン認証を行います");
             if (isYes) {
-                location.href = "/LMS/html/login.html";
+                location.href = "/LMS/html/login.php";
             } 
         }
     })
@@ -31,7 +31,7 @@ element2.addEventListener('click', () => {
             alert("この操作を行うためにはログインを行ってください");
             const isYes = confirm("ログイン認証を行います");
             if (isYes) {
-                location.href = "/LMS/html/login.html";
+                location.href = "/LMS/html/login.php";
             } 
         }
     })
