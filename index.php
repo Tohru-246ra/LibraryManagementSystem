@@ -32,6 +32,7 @@
     <meta charset="UTF-8">
     <title>LMS</title>
     <meta name="description" content="おうちの本を管理するwebアプリ">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--link rel="stylesheet" href="../bootstrap-5.3.0-alpha1-dist/css/bootstrap.css"-->
     <script src="../bootstrap-5.3.0-alpha1-dist/js/bootstrap.js"></script>
     <link rel="stylesheet" href="/LMS/css/style.css">
