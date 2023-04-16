@@ -14,9 +14,6 @@
     $json_string = file_get_contents('php://input');
     $obj = json_decode($json_string,true);
 
-
-
-
     $sum_query = mysqli_query($con,"select count(isbn) as sum from books");
 
     $result1 = mysqli_query($con,"select * from books where not(img = '' or img = 'null')
