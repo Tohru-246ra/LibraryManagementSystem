@@ -89,7 +89,15 @@ function onclick_btn(table,method){
             } else if (method == "xml") {
                 json_data = JSON.parse(ans);
 
-                let string = '<?xml version="1.0" encoding="UTF-8" ?><books>';
+                if (table == "books") {
+                    pref_s = "books";
+                    pref = "books";
+                } else if (table == "users") {
+                    pref_s = "users";
+                    pref = "user";
+                }
+
+                let string = `<?xml version="1.0" encoding="UTF-8" ?><${pref_s}>`;
 
                 for(let i = 0;json_data.length > i; i++) {
                     let con = 1;
@@ -102,10 +110,10 @@ function onclick_btn(table,method){
                         value = value.replace(/"/g,'&quot;');
 
                         if (con == 1) {
-                            string += `<book><${item}>${value}</${item}>`;
+                            string += `<${pref}><${item}>${value}</${item}>`;
                             con += 1;
                         } else if (con == Object.keys(json_data[i]).length) {
-                            string += `<${item}>${value}</${item}></book>`;
+                            string += `<${item}>${value}</${item}></${pref}>`;
                         } else {
                             string += `<${item}>${value}</${item}>`;
                             con += 1;
@@ -113,7 +121,7 @@ function onclick_btn(table,method){
                     }
                 }
 
-                string += '</books>'
+                string += `</${pref_s}>`
 
                 const blob = new Blob([string],{type: 'text/xml'});
 
